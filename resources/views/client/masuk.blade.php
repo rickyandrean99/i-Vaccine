@@ -3,17 +3,21 @@
 @section('content')
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-11">
+            <div class="col-11 " style="height:83vh;">
                 <div class="card mt-5" style="border: solid black 2px">
                     <div class="card-body row">
                         <div class="col-8 ">
                             <h2 class="">MASUK</h2>
                             <div>===================================================</div> <br>
                             <form action="" method="post">
-                                <label for="" class="form-label"> Email: </label>
-                                     <input type="email" class="form-control">
-                                <label for="" class="form-label"> Password: </label>
-                                     <input type="password" class="form-control"> <br>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                    <label for="floatingInput">Email</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                    <label for="floatingInput">Password</label>
+                                </div>
                                 <div class="d-flex justify-content-around">
                                     <label for="">
                                     <input type="checkbox"> Ingat Password
