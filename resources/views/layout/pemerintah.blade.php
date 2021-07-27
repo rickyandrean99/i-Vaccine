@@ -66,9 +66,6 @@
                     <!-- Content Website -->
                     <main>
                         <div class="container-fluid p-0">
-                            @for ($i = 1; $i < 100; $i++)
-                                <div>punten</div>
-                            @endfor
                             @yield("content")
                         </div>
                     </main>
