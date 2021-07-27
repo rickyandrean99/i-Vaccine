@@ -6,7 +6,7 @@
             <div class="col-11">
                 <div class="card mt-5" style="border: solid black 2px">
                     <div class="card-body row">
-                        <div class="col-8 d-grid gap-2 mx-auto">
+                        <div class="col-8 ">
                             <h2 class="">MASUK</h2>
                             <div>===================================================</div> <br>
                             <form action="" method="post">
