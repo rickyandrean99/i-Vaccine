@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.rubik-medium {
+    font-family: 'Rubik', sans-serif;
+}
+
+.nav-link {
+    transition: 0.7s;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.active {
+    background: rgba(255, 255, 255, 0.8) !important;
+    color: #111111 !important;
+    font-weight: bold;
+}

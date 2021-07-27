@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+.rubik-medium {
+    font-family: 'Rubik', sans-serif;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* CSS Layout Navigation */
+.container-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-list {
+    margin: auto;
+    font-size: 20px;
+}
+
+.navigation-list > li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar-brand, .side-navigation { 
+    display: none;
+}
+
+/* CSS Layout Navigation Responsive */
+@media screen and (max-width: 1000px) {
+    #navigation-bar {
+        top: 0;
+        margin: 0;
+    }
+
+    .navbar-brand { display: block;}
+    
+    .navigation-wrapper {
+        display: none;
+    }
+
+    .side-navigation {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .side-nav-list {
+        list-style: none;
+        padding: 0;
+    }
+      
+    .side-nav-list > .nav-item {
+        padding: 10px;
+    }
+
+    .side-nav-list > .nav-item > .nav-link {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .btn-close {
+        display: block;
+        margin: 30px 0 10px 20px;
+    }
+}
+
+/* CSS Layout Section Identity */
+#identity {
+    min-height: 920px;
+    display: flex;
+    align-items: center;
+}
+
+.identity-description {
+    line-height: 1.9rem;
+}
+
+.btn-mulai, .btn-daftar-vaksin {
+    width: 25%;
+}
+
+@media screen and (max-width: 720px) {
+    #identity {
+        min-height: 100vh;
+    }
+
+    .btn-mulai {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .btn-daftar-vaksin {
+        width: 50%;
+    }
+}
+
+/* CSS Layout Section Daftar Vaksin */
+.daftar-vaksin-deskripsi {
+    line-height: 1.9rem;
+}
+
+@media screen and (max-width: 720px) {
+    .header-section {
+        font-size: 1.6rem;
+    }
+}
