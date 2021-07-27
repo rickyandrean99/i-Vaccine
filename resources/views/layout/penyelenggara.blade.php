@@ -62,27 +62,27 @@
                     </div>
                 </div>
 
-                <div class="col-10">
+                <div class="col-10" style="max-height: 100vh; overflow-y: auto">
                     <!-- Content Website -->
                     <main>
                         <div class="container-fluid p-0">
-                            punten
+                            @for ($i = 1; $i < 100; $i++)
+                                <div>punten</div>
+                            @endfor
                             @yield("content")
                         </div>
                     </main>
+
+                    <footer>
+                        <div class="container footer-wrapper p-1">
+                            <div class="text-center h5 p-4 footer-text rubik-medium text-dark">
+                                Copyright © 2021 | i-Vaccine
+                            </div>
+                        </div>
+                    </footer>
                     <!-- Content Website End -->
                 </div>
             </div>
-
-            <!-- Footer Website -->
-            <!-- <footer>
-                <div class="container-fluid">
-                    <div class="container footer-wrapper p-1">
-                        
-                    </div>
-                </div>
-            </footer> -->
-            <!-- Footer Website End -->
 
             <!-- Javascript & Jquery -->
             <script>
