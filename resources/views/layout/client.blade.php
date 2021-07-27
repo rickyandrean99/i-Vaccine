@@ -56,7 +56,7 @@
                                         <a class="nav-link text-white" href="">Tiketmu</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" href="">Username ></a>
+                                        <a class="nav-link text-white" href="">Ricky&nbsp;&nbsp;></a>
                                     </li>
                                 @else
                                     <li class="nav-item">
@@ -114,7 +114,7 @@
             <!-- Navigation Website End -->
 
             <!-- Content Website -->
-            <main>
+            <main style="min-height: 87vh">
                 <div class="container-fluid p-0">
                     @yield("content")
                 </div>
