@@ -12,7 +12,7 @@
             <div class="row" style="position: relative">
                 <div class="col-12 text-center" style="position: absolute">
                     <div class="progress mt-3">
-                        <div class="progress-bar" role="progressbar" style="width: 25%;"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 25%;" id="step-bar"></div>
                     </div>
                 </div>
 
@@ -84,6 +84,14 @@
         $(document).on('click', '.pilih-vaksin', function() {
             hideContent();
             $('#content-step-2').show();
+            $('#step-bar').css('width', '50%');
         });
+
+        // Pindah ke step 3
+        // $(document).on('click', '.pilih-vaksin', function() {
+        //     hideContent();
+        //     $('#content-step-3').show();
+        //     $('#step-bar').css('width', '75%');
+        // });
     </script>
 @endsection
