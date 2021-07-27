@@ -25,37 +25,37 @@
                         <hr>
                         <ul class="nav nav-pills flex-column mb-auto">
                             <li class="nav-item mb-1">
-                                <a href="{{ route('dashboard-penyelenggara') }}" class="nav-link text-white p-3" id="nav-dashboard">
+                                <a href="{{ route('dashboard-pemerintah') }}" class="nav-link text-white p-3" id="nav-dashboard">
                                     <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
                                     Dashboard
                                 </a>
                             </li>
 
                             <li class="nav-item mb-1">
-                                <a href="{{ route('edit-data-penyelenggara') }}" class="nav-link text-white p-3" id="nav-edit">
+                                <a href="{{ route('penyelenggara-pemerintah') }}" class="nav-link text-white p-3" id="nav-penyelenggara">
                                     <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-                                    Edit Data
+                                    Penyelenggara
                                 </a>
                             </li>
 
                             <li class="nav-item mb-1">
-                                <a href="{{ route('antrian-vaksin-penyelenggara') }}" class="nav-link text-white p-3" id="nav-antrian">
+                                <a href="{{ route('rekap-peserta-pemerintah') }}" class="nav-link text-white p-3" id="nav-rekap">
                                     <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-                                    Antrian Vaksin
+                                    Rekap Peserta
                                 </a>
                             </li>
                             
                             <li class="nav-item mb-1">
-                                <a href="{{ route('rekap-peserta-penyelenggara') }}" class="nav-link text-white p-3" id="nav-rekap">
+                                <a href="{{ route('stok-vaksin-pemerintah') }}" class="nav-link text-white p-3" id="nav-stok">
                                     <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-                                    Rekap Peserta
+                                    Stok Vaksin
                                 </a>
                             </li>
 
                             <li class="nav-item mb-1">
-                                <a href="{{ route('vaksin-penyelenggara') }}" class="nav-link text-white p-3" id="nav-vaksin">
+                                <a href="{{ route('distribusi-vaksin-pemerintah') }}" class="nav-link text-white p-3" id="nav-distribusi">
                                     <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-                                    Vaksin
+                                    Distribusi Vaksin
                                 </a>
                             </li>
                         </ul>

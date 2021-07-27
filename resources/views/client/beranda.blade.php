@@ -57,7 +57,7 @@
             </div>
 
             <div class="h1 text-center mb-5 mb-md-5 mt-1 mt-md-4">
-                <a href="#"><button type="button" class="btn btn-success p-2 btn-daftar-vaksin"><span class="h5">Daftar Sekarang</span></button></a>
+                <a href="{{ route('pendaftaran-vaksin') }}"><button type="button" class="btn btn-success p-2 btn-daftar-vaksin"><span class="h5">Daftar Sekarang</span></button></a>
             </div>
         </div>
     </section>

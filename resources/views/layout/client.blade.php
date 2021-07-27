@@ -45,12 +45,12 @@
 
                         <div class="col-6 pe-5">
                             <ul class="navbar-nav mr-auto mt-2 mt-lg-0 navigation-list float-end">
-                                @if (false)
+                                @if (true)
                                     <li class="nav-item">
                                         <a class="nav-link text-white" href="{{ route('beranda') }}">Beranda</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" href="">Daftar Vaksin</a>
+                                        <a class="nav-link text-white" href="{{ route('pendaftaran-vaksin') }}">Daftar Vaksin</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link text-white" href="">Tiketmu</a>
@@ -80,12 +80,12 @@
                         <button class="text-white btn-close" onclick="closeNav()" style="cursor: pointer; background: none">X</button>
                         
                         <ul class="mr-auto mt-2 mt-lg-0 side-nav-list">
-                            @if (false)
+                            @if (true)
                                 <li class="nav-item">
                                     <a class="nav-link text-white" href="{{ route('beranda') }}">Beranda</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="">Daftar Vaksin</a>
+                                    <a class="nav-link text-white" href="{{ route('pendaftaran-vaksin') }}">Daftar Vaksin</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-white" href="">Tiketmu</a>

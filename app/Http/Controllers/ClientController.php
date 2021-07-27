@@ -21,4 +21,8 @@ class ClientController extends Controller
     public function antrian() {
         return view('client.antrian');
     }
+
+    public function pendaftaranVaksin() {
+        return view('client.pendaftaran');
+    }
 }
