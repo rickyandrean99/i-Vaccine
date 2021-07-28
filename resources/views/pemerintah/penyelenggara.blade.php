@@ -1,33 +1,20 @@
 @extends('layout.pemerintah')
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
 
 @section('content')
-    <div class="row">
-        <div class="col-12 mt-5">
+    <div class="row justify-content-center">
+        <div class="col-11 mt-5">
             <div class="text-center mb-5 mb-md-5 mt-1 mt-md-4">
                 <div class="h1 text-center mb-5 mb-md-5 mt-1 mt-md-4 header-section">Data Penyelenggara</div>
-                <form action="" method="post">
-                    <select name="" id="" class="form-select">
-                        <option value="">-- Tampilkan Perdaerah --</option>
-                        <option value="">Denpasar</option>
-                        <option value="">Badung</option>
-                        <option value="">Singaraja</option>
-                        <option value="">Negara</option>
-                        <option value="">Karangasem</option>
-                    </select>
-                </form>
-                <div class="text-end mb-5 mb-md-5 mt-1 mt-md-4 header-section">
-                    Nama Penyelenggara:
-                    <form action="" method="post" class="d-inline">
-                        <input type="text" placeholder="Nama Penyelenggara" class="w-25 p-2">
-                    </form>
-                </div>
 
-                <table class="table table-bordered">
+                <table class="table table-striped" id="table_id">
                     <thead>
                         <tr>
                             <th scope="col" style="min-width: 70px; width: 70px">No</th>
-                            <th scope="col">Nama</th>
+                            <th scope="col">Nama Penyelenggara</th>
                             <th scope="col">Alamat</th>
+                            <th scope="col">Kabupaten</th>
+                            <th scope="col">Provinsi</th>
                             <th scope="col" style="width: 150px;"></th>
                         </tr>
                     </thead>
@@ -35,29 +22,98 @@
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Jalanan</td>
-                            <td><a href="">Detail</a></td>
+                            <td>Puri Raharja General Hospital</td>
+                            <td>Jl. WR Supratman No. 14 & 19</td>
+                            <td>Denpasar</td>
+                            <td>Bali</td>
+                            <td><button type="button" class="btn btn-primary">Detail</button></td>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Jalanin</td>
-                            <td><a href="">Detail</a></td>
+                            <td>RUMAH SAKIT Udayana</td>
+                            <td>Jl. P.B. Sudirman No. 1</td>
+                            <td>Denpasar</td>
+                            <td>Bali</td>
+                            <td><button type="button" class="btn btn-primary">Detail</button></td>
                         </tr>
                         <tr>
                             <th scope="row">3</th>
-                            <td>Matthew</td>
-                            <td>Jalanon</td>
-                            <td><a href="">Detail</a></td>
+                            <td>Bhayangkara Hospital Denpasar</td>
+                            <td>Jl. Trijata No. 32</td>
+                            <td>Denpasar</td>
+                            <td>Bali</td>
+                            <td><button type="button" class="btn btn-primary">Detail</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Wangaya Regional General Hospital</td>
+                            <td>Jl. Kartini No. 133</td>
+                            <td>Denpasar</td>
+                            <td>Bali</td>
+                            <td><button type="button" class="btn btn-primary">Detail</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Bali Royal Hospital</td>
+                            <td>Jl. Tantular No. 6</td>
+                            <td>Denpasar</td>
+                            <td>Bali</td>
+                            <td><button type="button" class="btn btn-primary">Detail</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Rumah Sakit Manuaba</td>
+                            <td>Jl. Cokroaminoto No. 28</td>
+                            <td>Denpasar</td>
+                            <td>Bali</td>
+                            <td><button type="button" class="btn btn-primary">Detail</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>Rumah Sakit Prima Medika</td>
+                            <td>Jl. Raya Sesetan No. 10</td>
+                            <td>Denpasar</td>
+                            <td>Bali</td>
+                            <td><button type="button" class="btn btn-primary">Detail</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8</th>
+                            <td>Surya Husada General Hospital</td>
+                            <td>Jl. Cokroaminoto No. 356</td>
+                            <td>Denpasar</td>
+                            <td>Bali</td>
+                            <td><button type="button" class="btn btn-primary">Detail</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">9</th>
+                            <td>Rumah Sakit Ibu dan Anak Puri Bunda</td>
+                            <td>Jl. Gatot Subroto VI No. 19</td>
+                            <td>Denpasar</td>
+                            <td>Bali</td>
+                            <td><button type="button" class="btn btn-primary">Detail</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10</th>
+                            <td>Kasih Ibu Hospital</td>
+                            <td>Jl. Teuku Umar No. 120</td>
+                            <td>Denpasar</td>
+                            <td>Bali</td>
+                            <td><button type="button" class="btn btn-primary">Detail</button></td>
                         </tr>
                     </tbody>
-                    </table>
+                </table>
             </div>
 
         </div>
     </div>
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+
     <script>
         $('#nav-penyelenggara').addClass('active');
+
+        $(document).ready( function () {
+            $('#table_id').DataTable();
+        });
     </script>
 @endsection

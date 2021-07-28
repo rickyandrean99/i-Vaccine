@@ -16,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'ClientController@beranda')->name('beranda');
 Route::get('/daftar', 'ClientController@daftar')->name('daftar');
 Route::get('/masuk', 'ClientController@masuk')->name('masuk');
-Route::get('/antrian', 'ClientController@antrian')->name('antrian');
+Route::get('/tiket', 'ClientController@tiket')->name('tiket');
 Route::get('/pendaftaran-vaksin', 'ClientController@pendaftaranVaksin')->name('pendaftaran-vaksin');
+Route::get('/edit-profil', 'ClientController@editProfil')->name('edit-profil');
+Route::post('/session-login', 'ClientController@sessionLogin')->name('session-login');
+Route::post('/session-logout', 'ClientController@sessionLogout')->name('session-logout');
 
 Route::get('/penyelenggara/dashboard', 'PenyelenggaraController@dashboard')->name('dashboard-penyelenggara');
 Route::get('/penyelenggara/edit', 'PenyelenggaraController@editData')->name('edit-data-penyelenggara');

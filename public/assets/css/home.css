@@ -91,7 +91,7 @@ html {
 }
 
 .identity-description {
-    line-height: 1.9rem;
+    line-height: 2.5rem;
 }
 
 .btn-mulai, .btn-daftar-vaksin {
@@ -116,7 +116,7 @@ html {
 
 /* CSS Layout Section Daftar Vaksin */
 .daftar-vaksin-deskripsi {
-    line-height: 1.9rem;
+    line-height: 2.3rem;
 }
 
 @media screen and (max-width: 720px) {

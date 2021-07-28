@@ -18,11 +18,23 @@ class ClientController extends Controller
         return view('client.daftar');
     }
 
-    public function antrian() {
+    public function tiket() {
         return view('client.antrian');
     }
 
     public function pendaftaranVaksin() {
         return view('client.pendaftaran');
+    }
+
+    public function editProfil() {
+        return view('client.edit-profil');
+    }
+
+    public function sessionLogin(Request $request) {
+        session(['login' => true]);
+    }
+
+    public function sessionLogout(Request $request) {
+        session(['login' => false]);
     }
 }

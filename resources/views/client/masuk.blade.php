@@ -1,40 +1,57 @@
 @extends('layout.client')
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid bg-light">
         <div class="row justify-content-center">
-            <div class="col-11 " style="height:83vh;">
-                <div class="card mt-5" style="border: solid black 2px">
-                    <div class="card-body row">
-                        <div class="col-8 ">
-                            <h2 class="">MASUK</h2>
-                            <div>===================================================</div> <br>
-                            <form action="" method="post">
-                                <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Email</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Password</label>
-                                </div>
-                                <div class="d-flex justify-content-around">
-                                    <label for="">
-                                    <input type="checkbox"> Ingat Password
-                                    </label>
-                                    <a href="">Lupa Password</a>
-                                </div>
-                                <br>
-                                <button class="btn btn-primary d-grid gap-2 mx-auto col-6" type="submit">MASUK</button>
-                            </form> <br>
+            <div class="col-11 d-flex flex-column justify-content-center" style="min-height:87vh;">
+                <div class="card">
+                    <div class="card-body row p-5">
+                        <div class="col-8">
+                            <h2 class="rubik-medium">MASUK</h2>
+                            <hr class="mb-5">
+
+                            <div class="form-floating mb-5">
+                                <input type="email" class="form-control rubik-medium" id="email" placeholder="Email">
+                                <label for="email">Email</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control rubik-medium" id="password" placeholder="Password">
+                                <label for="password">Password</label>
+                            </div>
+
+                            <div class="form-floating mb-3 form-inline">
+                                <input type="checkbox" nama="remember" id="remember"><span class="ms-2" style="font-weight: 500">Ingat akun</span>
+                                <span class="float-end me-5" style='cursor: pointer; text-decoration: underline; font-weight: 500'>Lupa password?</span>
+                            </div>
+
+                            <div class="mt-5">
+                                <button class="btn btn-primary col-6 w-100 rubik-medium p-2" id="masuk-akun">MASUK</button>
+                            </div>
                         </div>
-                        <div class="col-3 align-self-center" style="margin-left:3vw;">
-                            <h4>Belum Punya Akun?</h4>
-                            <a href="" class="btn btn-primary"> Daftar Sekarang</a>
+
+                        <div class="col-4 d-flex align-items-center justify-content-center flex-column border-start-1">
+                            <div class="h2 rubik-medium">Belum Punya Akun?</div>
+                            <a href="{{ route('daftar') }}" class="btn btn-primary p-2 ps-4 pe-4 mt-4"><span class="rubik-medium h5">Daftar Sekarang</span></a>
                         </div>  
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).on('click', '#masuk-akun', function() {
+            $.ajax({
+                type: 'POST',
+                url: '{{ route('session-login') }}',
+                data: {
+                    '_token': '<?php echo csrf_token(); ?>'
+                },
+                success: function(data) {
+                    window.location = "/";
+                }
+            });
+        });
+    </script>
 @endsection

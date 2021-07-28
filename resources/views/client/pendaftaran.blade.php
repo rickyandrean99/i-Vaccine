@@ -69,27 +69,57 @@
                             <h2 class="card-title text-center mb-5 rubik-medium">Pilih Lokasi Vaksin</h2>
                             <input type="text" class="form-control rubik-medium mb-5 p-2 ps-4 pe-4" placeholder="Cari penyelenggara...">
                             <div class="row">
-                                @for($i = 0; $i < 4; $i++)
+                                @php 
+                                    $penyelenggara_vaksin = [
+                                        [
+                                            'nama' => 'Puri Raharja General Hospital',
+                                            'deskripsi' => 'Rumah sakit Puri Raharja menyediakan vaksin jenis AstraZeneca bagi orang dewasa dan vaksin jenis Sinovac untuk lansia dan anak dibawah 18 tahun',
+                                            'jam_kerja' => '08.00 - 13.00',
+                                            'stok_tersedia' => '100'
+                                        ],
+                                        [
+                                            'nama' => 'RUMAH SAKIT Udayana',
+                                            'deskripsi' => 'Rumah sakit Udayana hanya melayani vaksin untuk lansia. Vaksin yang digunakan adalah vaksin Sinovac',
+                                            'jam_kerja' => '08.00 - 15.00',
+                                            'stok_tersedia' => '76'
+                                        ],
+                                        [
+                                            'nama' => 'Bhayangkara Hospital Denpasar',
+                                            'deskripsi' => 'Rumah sakit bhayangkara saat ini hanya diperuntukkan bagi anggota kepolisian. Saat ini hanya menyediakan vaksin jenis Moderna',
+                                            'jam_kerja' => '09.00 - 12.00',
+                                            'stok_tersedia' => '32'
+                                        ],
+                                        [
+                                            'nama' => 'RSUD Bali Mandara',
+                                            'deskripsi' => 'Rumah Sakit Umum Daerah Bali Mandara menyediakan berbagai jenis vaksin seperti Sinovac, AstraZeneca, Pfizer, Moderna.',
+                                            'jam_kerja' => '08.00 - 16.00',
+                                            'stok_tersedia' => '13'
+                                        ]
+                                    ]; 
+                                @endphp
+                                @for($i = 0; $i < count($penyelenggara_vaksin); $i++)
                                     <div class="col-12 mb-4">
                                         <div class="card w-100" style="height: 300px; max-height: 300px">
                                             <div class="card-body pt-0">
                                                 <div class="row">
                                                     <div class="col-3 p-0">
                                                         <div class="d-flex align-items-center justify-content-center" style="height: 300px; max-height: 300px">
-                                                            <img src="{{ asset('assets/img/baal.jpg') }}" alt="img-penyelenggara" style="height: 270px">
+                                                            <div style="height: 270px" class="w-100 bg-secondary d-flex align-items-center justify-content-center h4 text-white rubik-medium">
+                                                                Gambar
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-9 d-flex flex-column pe-4" style="position: relative">
-                                                        <div class="rubik-medium h5 mt-4">Nama penyelenggara</div>
-                                                        <div class="rubik-medium mt-3">
-                                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, esse odit exercitationem ipsum id enim atque eos, sed ex facere accusamus, reprehenderit et voluptatem voluptate velit suscipit fugit quaerat. Ut ex nam minus minima quis eius nobis laboriosam quidem ipsa? (Nanti limit katanya)
+                                                        <div class="rubik-medium h5 mt-4">{{ $penyelenggara_vaksin[$i]['nama'] }}</div>
+                                                        <div class="rubik-medium mt-3 pe-5">
+                                                            {{ $penyelenggara_vaksin[$i]['deskripsi'] }}
                                                         </div>
                                                         <div class="row rubik-medium mt-4">
-                                                            <div class="col-4">
-                                                                Jam Kerja
+                                                            <div class="col-5">
+                                                                Jam operasional: {{ $penyelenggara_vaksin[$i]['jam_kerja'] }}
                                                             </div>
-                                                            <div class="col-4">
-                                                                Sisa Vaksin
+                                                            <div class="col-5">
+                                                                {{ $penyelenggara_vaksin[$i]['stok_tersedia'] }} dosis tersedia
                                                             </div>
                                                         </div>
 
@@ -114,6 +144,7 @@
                             <h2 class="card-title text-center mb-5 rubik-medium">Lengkapi Data Diri</h2>
                             <div class="row">
                                 <div class="col-4">
+                                    <!-- Photo by Spencer Selover from Pexels -->
                                     <img src="{{ asset('assets/img/baal.jpg') }}" alt="" style="width: 95%">
                                     <div>
                                         <label for="files" class="btn text-decoration-underline" style="font-weight:500">Ubah foto</label>
@@ -226,7 +257,7 @@
                         <div class="card-body pt-4">
                             <h2 class="card-title text-center mb-5 rubik-medium">Konfirmasi Pendaftaran</h2>
                             <div class="row justify-content-center mb-1">
-                                <div class="text-center h5 col-8" style="line-height: 1.9rem">Dengan ini saudara/i <b><u>nama</u></b> mendaftarkan diri dalam program vaksinasi nasional yang bertempat di <b><u>nama penyelenggara</u></b> dalam rangka mensukseskan program vaksinasi nasional yang diselenggarakan Pemerintah RI</div>
+                                <div class="text-center h5 col-8" style="line-height: 1.9rem">Dengan ini saudara/i <b>Ricky Andrean</b> bersedia mendaftarkan diri dalam program vaksinasi nasional yang bertempat di <b>Puri Raharja General Hospital</b> dalam rangka mensukseskan program vaksinasi nasional yang diselenggarakan Pemerintah RI</div>
                             </div>
                             <div class="text-center">
                                 <button type="button" class="btn btn-success ps-4 pe-4 pt-2 pb-2 mt-4 mb-1 w-25" id="btn-konfirmasi-daftar"><span class="h5">Daftar</span></button>
@@ -345,7 +376,7 @@
 
         // Redirect ke halaman tiket
         $(document).on('click', '#btn-konfirmasi-berhasil', function() {
-            window.location = "/antrian";
+            window.location = "/tiket";
         });
     </script>
 @endsection

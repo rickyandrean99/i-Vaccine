@@ -45,7 +45,8 @@
 
                         <div class="col-6 pe-5">
                             <ul class="navbar-nav mr-auto mt-2 mt-lg-0 navigation-list float-end">
-                                @if (true)
+                                @php $login = session()->get('login'); @endphp
+                                @if ($login)
                                     <li class="nav-item">
                                         <a class="nav-link text-white" href="{{ route('beranda') }}">Beranda</a>
                                     </li>
@@ -53,10 +54,16 @@
                                         <a class="nav-link text-white" href="{{ route('pendaftaran-vaksin') }}">Daftar Vaksin</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" href="">Tiketmu</a>
+                                        <a class="nav-link text-white" href="{{ route('tiket') }}">Tiketku</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-white" href="">Ricky&nbsp;&nbsp;></a>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Ricky Andrean
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="{{ route('edit-profil') }}">Edit Profil</a></li>
+                                            <li><a class="dropdown-item btn-keluar" href="#">Keluar</a></li>
+                                        </ul>
                                     </li>
                                 @else
                                     <li class="nav-item">
@@ -80,7 +87,7 @@
                         <button class="text-white btn-close" onclick="closeNav()" style="cursor: pointer; background: none">X</button>
                         
                         <ul class="mr-auto mt-2 mt-lg-0 side-nav-list">
-                            @if (true)
+                            @if ($login)
                                 <li class="nav-item">
                                     <a class="nav-link text-white" href="{{ route('beranda') }}">Beranda</a>
                                 </li>
@@ -88,13 +95,13 @@
                                     <a class="nav-link text-white" href="{{ route('pendaftaran-vaksin') }}">Daftar Vaksin</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="">Tiketmu</a>
+                                    <a class="nav-link text-white" href="{{ route('tiket') }}">Tiketku</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="">Edit Profil</a>
+                                    <a class="nav-link text-white" href="{{ route('edit-profil') }}">Edit Profil</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="">Keluar</a>
+                                    <a class="nav-link text-white btn-keluar" href="#">Keluar</a>
                                 </li>
                             @else
                                 <li class="nav-item">
@@ -142,6 +149,19 @@
                 function closeNav() {
                     $('.side-navigation').css('width', '0');
                 }
+
+                $(document).on('click', '.btn-keluar', function() {
+                    $.ajax({
+                        type: 'POST',
+                        url: '{{ route('session-logout') }}',
+                        data: {
+                            '_token': '<?php echo csrf_token(); ?>'
+                        },
+                        success: function(data) {
+                            window.location = "/";
+                        }
+                    });
+                });
             </script>
         </div>
     </body>

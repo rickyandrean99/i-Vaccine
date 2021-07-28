@@ -1,8 +1,8 @@
 @extends('layout.penyelenggara')
 
 @section('content')
-        <div class="row">
-            <div class="col-12 mt-5">
+        <div class="row justify-content-center">
+            <div class="col-11 mt-5">
                 <div class="text-center mb-5 mb-md-5 mt-1 mt-md-4">
                     <form action="" method="post">
                         <select name="" id="" class="form-select">

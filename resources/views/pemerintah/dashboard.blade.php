@@ -52,8 +52,8 @@
                         <div class="h1 text-center mb-5 mb-md-5 mt-1 mt-md-4 header-section">Peta Sebaran Vaksinasi COVID-19</div>
 
                         <div class="row mb-4 justify-content-center">
-                            <div class="col-11 col-md-12 bg-primary text-white text-center h4 d-flex align-items-center justify-content-center" style="min-height: 500px">
-                                Google Maps API + Python Matplotlib
+                            <div class="col-11 col-md-12 bg-secondary text-white text-center h4 d-flex align-items-center justify-content-center" style="min-height: 500px">
+                                Peta Sebaran
                             </div>
                         </div>
                     </div>
